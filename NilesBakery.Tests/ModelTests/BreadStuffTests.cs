@@ -9,8 +9,8 @@ namespace NilesBakery.Tests
     [TestMethod]
     public void BakeryConstructor_CreatesInstanceOfBread_Bread()
     {
-      Breadstuff newBread = new Breadstuff()
-      Assert.AreEqual(typeof(Breadstuff), newBread.GetType());
+      BreadStuff newBread = new BreadStuff();
+      Assert.AreEqual(typeof(BreadStuff), newBread.GetType());
     }
   }
 }
