@@ -12,5 +12,14 @@ namespace NilesBakery.Tests
       BreadStuff newBread = new BreadStuff();
       Assert.AreEqual(typeof(BreadStuff), newBread.GetType());
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string description = "Crispy crunchy bread.";
+      BreadStuff newBread =  new BreadStuff(description);
+      string result = newBreadStuff.Description;
+      Assert.AreEqual(description, result);
+    }
   }
 }
