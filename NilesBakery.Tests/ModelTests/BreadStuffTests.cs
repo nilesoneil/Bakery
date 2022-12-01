@@ -9,17 +9,30 @@ namespace NilesBakery.Tests
     [TestMethod]
     public void BakeryConstructor_CreatesInstanceOfBread_Bread()
     {
-      BreadStuff newBread = new BreadStuff("test");
-      Assert.AreEqual(typeof(BreadStuff), newBread.GetType());
+      Bread newBread = new Bread("test");
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
     [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
       string description = "Crispy crunchy bread.";
-      BreadStuff newBread =  new BreadStuff(description);
+      Bread newBread =  new Bread(description);
       string result = newBread.Description;
       Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()  
+    {
+      string description = "Crispy crunchy bread.";
+      Bread newBread = new Bread(description);
+
+      string updatedDescription = "Do the dishes";
+      newBread.Description = updatedDescription;
+      string result = newBread.Description;
+
+      Assert.AreEqual(updatedDescription, result);
     }
   }
 }

@@ -1,13 +1,13 @@
 namespace NilesBakery.Models
 {
-  public class BreadStuff
+  public class Bread
   {
-    public string Description { get; }
+    public string Description { get; set; }
 
-    public BreadStuff(string description)
+    public Bread(string description)
     {
       Description = description;
-      
+
     }
   }
 }
