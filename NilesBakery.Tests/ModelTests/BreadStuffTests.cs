@@ -10,40 +10,23 @@ namespace NilesBakery.Tests
     [TestMethod]
     public void BakeryConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread("test");
+      Bread newBread = new Bread(3);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
     [TestMethod]
-    public void GetDescription_ReturnsDescription_String()
+    public void BakeryConstructor_CreatesInstanceOfBreadWithBreadCount_Int()
     {
-      int amount = 3;
-      Bread newBread =  new Bread(amount);
-      int result = newBread.;
-      Assert.AreEqual(amount, result);
+      Bread newBread =  new Bread(3);
+      Assert.AreEqual(3, newBread.BreadAmount);
     }
 
     [TestMethod]
-    public void GetAmount_ReturnAmount_Int()
+    public void Price_ReturnsPriceOfOrder_Int()
     {
-      int breadAmount = 3;
-      Bread newBread = new Bread(breadAmount);
-      int howManyBread = newBread.BreadAmount;
-      Assert.AreEqual(breadAmount, howManyBread);
+      Bread newBread = new Bread(1);
+      Assert.AreEqual(5, newBread.Price());
     }
-
-
-    [TestMethod]
-    public void SetDescription_SetDescription_String()  
-    {
-      string amount = "Buy 2, get 1 free (every 3rd loaf of bread is free.). A single loaf costs $5, two loaves costs $10, and three loaves cost $10.";
-      Bread newBread = new Bread(amount);
-
-      string updatedDescription = "Thanks for your purchase!";
-      newBread.Description = updatedDescription;
-      string result = newBread.Description;
-
-      Assert.AreEqual(updatedDescription, result);
-    }
+    
   }
 }
