@@ -46,6 +46,37 @@ namespace StoreFront
     public static int PastryOrder()
     {
       Console.WriteLine("How many pastries would you like today?");
+      int pastryQuantity = UserOrder();
+      Pastries pastryOrder = new Pastries(pastryAmount);
+      int pastryPrice = pastryOrder.Price();
+      return pastryPrice;
+    }
+
+    public static int UserOrder()
+    {
+      string userInput = Console.ReadLine();
+      int order;
+      bool isParseable = int.TryParse(userInput, out order);
+
+      if (isParseable)
+      {
+        if(order < 0)
+        {
+          Console.WriteLine(" Please enter a number:");
+          order = UserOrder();
+          return order;
+        }
+        else
+        {
+          return order;
+        }
+      }
+      else
+      {
+        Console.WriteLine("Please enter numbers only");
+        order = UserOrder();
+        return order;
+      }
     }
   }
 }
