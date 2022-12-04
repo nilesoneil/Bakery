@@ -16,7 +16,7 @@ namespace NilesBakery.Models
       if (pastryAmount >= 3)
       {
         int pastryThrees = pastryAmount / 3;
-        cost += 5 * pastryThrees;
+        price += 5 * pastryThrees;
         pastryAmount -= (pastryThrees * 3);
       }
 

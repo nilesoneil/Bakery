@@ -10,8 +10,8 @@ namespace StoreFront
       Console.WriteLine("Welcome To Niles' Bakery!");
       Console.WriteLine("");
       Console.WriteLine("");
-      Console.WriteLine("MENU")
-      Console.WriteLine("")
+      Console.WriteLine("MENU");
+      Console.WriteLine("");
       Console.WriteLine(" Bread: $5 per loaf");
       Console.WriteLine(" Pastry: $2 per pastry");
       Console.WriteLine("");
@@ -47,7 +47,7 @@ namespace StoreFront
     {
       Console.WriteLine("How many pastries would you like today?");
       int pastryQuantity = UserOrder();
-      Pastries pastryOrder = new Pastries(pastryAmount);
+      Pastries pastryOrder = new Pastries(pastryQuantity);
       int pastryPrice = pastryOrder.Price();
       return pastryPrice;
     }
