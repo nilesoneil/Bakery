@@ -28,5 +28,11 @@ namespace NilesBakery.Tests
       Assert.AreEqual(5, newBread.Price());
     }
     
+    [TestMethod]
+    public void Price_ReturnsPriceWithDiscount_Int()
+    {
+      Bread newBread = new Bread(4);
+      Assert.AreEqual(15, newBread.Price());
+    }
   }
 }
