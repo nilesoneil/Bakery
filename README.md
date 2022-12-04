@@ -10,7 +10,8 @@ This application will Welcome Customer's to the bakery, give the price for bread
 
 ### Technologies Used
   * C#
-  * Javascript
+  * Net6
+  * MSTest
 
 ### Setup Instructions
  * Clone respository
@@ -18,7 +19,7 @@ This application will Welcome Customer's to the bakery, give the price for bread
  * Run dotnet restore and then dotnet build
  * Navigate to the NilesBakery directory and use dotnet run to start
 ### Known Bugs
-  * Can't get the first test to pass
+  * None
 
 ### License
 MIT Copyright (c) 11/20/2022 Niles O'Neil
